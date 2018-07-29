@@ -1,7 +1,7 @@
 # recomendation-system-surprise
 
-sh```
-	Project to the discipline RI on UFCG.
+```sh
+	Project to the discipline RI on UFCG.	
 ```
 
 ###Structure:
