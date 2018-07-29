@@ -1,12 +1,14 @@
 # recomendation-system-surprise
 
 ```sh
-	Project to the discipline RI on UFCG.	
+	Project to the discipline RI at UFCG.	
+
+	Professor: Leandro Balby
 ```
 
 ## Structure:
 
-- **backend** - Path that contains our algorithm to make the inferences.
+- **backend** - Path that contains our algorithm to make the recomendations.
 - **frontend** - Front to receive the userID from the real user and return the top5.
 - **report** - A Notebook that contains the system more detailed.
 - **requeriments** - All lib that we gonna need.
