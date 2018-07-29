@@ -14,7 +14,7 @@ wasnt_watched = dict()
 Gettin all itens from the data base.
     Arranging into a dictonary adding key=id and value=item_name
 '''
-itens = open('data/ml-100k/u.item',encoding="ISO-8859-1")
+itens = open('../data/ml-100k/u.item',encoding="ISO-8859-1")
 item_data = itens.read().split('\n')
 for info in item_data:
     split = info.split('|')
@@ -30,7 +30,7 @@ itens.close()
 Getting films that user have been watched
      Arranging into a dictonary adding key=id and value=item_name 
 '''
-base = open('data/ml-100k/u1.base',encoding="ISO-8859-1")
+base = open('../data/ml-100k/u1.base',encoding="ISO-8859-1")
 item_base = base.read().split('\n')
 for usr_info in item_base:
     split = usr_info.split('\t')
@@ -48,7 +48,7 @@ base.close()
 Getting films that user didnt watch
      Arranging into a dictonary adding key=id and value=item_name 
 '''
-films_list = set(dict_itens.keys())
+films_list = set(dict_itens_by_id.keys())
 for i in watched:
     films_list_user = set(watched[i])
     wasnt_watched[i] = films_list.difference(films_list_user)
@@ -64,6 +64,7 @@ algo_KNN = KNNWithMeans(k=4, sim_options={'name': 'cosine', 'user_based': True})
 
 algo_KNN.fit(trainset)
 predictions_knn = algo_KNN.test(testset)
+
 
 def get_5_films(uid):
     '''
@@ -116,3 +117,9 @@ def show_equaly_film(film_name):
     film_raw_id = dict_id_by_itens[film_name]
     film_inner_id = algo_KNN.trainset.to_inner_iid(film_raw_id)
     return(dict_itens_by_id[str(film_inner_id)])
+
+
+
+if __name__ == '__main__':
+    show_top_five('360')
+    show_equaly_film('Toy Story (1995)')
