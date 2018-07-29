@@ -3,6 +3,7 @@ from surprise import Dataset
 from surprise import KNNWithMeans,accuracy
 from surprise.model_selection import cross_validate,train_test_split
 
+__all__ = ['show_top_five','show_equaly_film','get_all_users','get_all_films']
 #Dictionaries we gonna use
 dict_itens_by_id = dict()
 dict_id_by_itens = dict()
@@ -116,9 +117,18 @@ def show_equaly_film(film_name):
     '''
     film_raw_id = dict_id_by_itens[film_name]
     film_inner_id = algo_KNN.trainset.to_inner_iid(film_raw_id)
-    return(dict_itens_by_id[str(film_inner_id)])
+    print((dict_itens_by_id[str(film_inner_id)]))
 
+def get_all_users():
+	print(list(watched.keys()))
+
+def get_all_films():
+	print(list(dict_id_by_itens.keys()))
 
 if __name__ == '__main__':
+    #get_all_users()
+    #get_all_films()
+    #print('---------')
     show_top_five('360')
+    print('---------')
     show_equaly_film('Toy Story (1995)')
