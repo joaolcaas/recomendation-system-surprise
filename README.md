@@ -5,8 +5,8 @@
 ```
 
 ###Structure:
-	***cliente*** - 
-	***service*** -
+	***cliente*** - nothing
+	***service*** - nothing
 	***report*** - A Notebook that contains the system more detailed
 	***requeriments*** - All lib that we gonna need
 
