@@ -119,7 +119,6 @@ def show_equaly_film(film_name):
     return(dict_itens_by_id[str(film_inner_id)])
 
 
-
 if __name__ == '__main__':
     show_top_five('360')
     show_equaly_film('Toy Story (1995)')
