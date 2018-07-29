@@ -6,10 +6,11 @@
 
 ## Structure:
 
-- **cliente** - nothing
-- **service** - nothing
-- **report** - A Notebook that contains the system more detailed
-- **requeriments** - All lib that we gonna need
+- **backend** - Path that contains our algorithm to make the inferences.
+- **frontend** - Front to receive the userID from the real user and return the top5.
+- **report** - A Notebook that contains the system more detailed.
+- **requeriments** - All lib that we gonna need.
+- **data** - MovieLens 100k dataset (https://movielens.org/)
 
 ## Usage:
 - **google appengine** -  Used to hosped the service
