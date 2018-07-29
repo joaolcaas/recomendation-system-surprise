@@ -3,7 +3,7 @@ from surprise import Dataset
 from surprise import KNNWithMeans,accuracy
 from surprise.model_selection import cross_validate,train_test_split
 
-__all__ = ['show_top_five','show_equaly_film','get_all_users','get_all_films']
+__all__ = ['show_top_five','show_equaly_film','get_all_users','get_all_films','get_neighbors']
 #Dictionaries we gonna use
 dict_itens_by_id = dict()
 dict_id_by_itens = dict()
@@ -124,6 +124,23 @@ def get_all_users():
 
 def get_all_films():
 	print(list(dict_id_by_itens.keys()))
+
+
+def show_top_3_neighbors(uid):
+    '''
+        Function to return the 3 closest neighbors from the user that has been passed
+        
+        Args:
+        ---------
+            uid: User id
+        Returns:
+        --------
+            closest_neighbors: An array with the 3 closest neighbors
+    '''
+    inner_uid = algo_KNN.trainset.to_inner_uid(uid)
+    closest_neighbors = algo_KNN.get_neighbors(iid=inner_uid, k=3)
+    return closest_neighbors
+
 
 if __name__ == '__main__':
     #get_all_users()
