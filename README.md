@@ -13,6 +13,6 @@
 
 ## Usage:
 - **google appengine** -  Used to hosped the service
-		sample avaiable on https://github.com/Luiz-FS/google-appengine-simple-example
+		 - Sample avaiable on https://github.com/Luiz-FS/google-appengine-simple-example
 
-- **surprise** - All the usages and functions used here i get from http://surpriselib.com/
+- **surprise** - All the usages and functions used here i got from http://surpriselib.com/
