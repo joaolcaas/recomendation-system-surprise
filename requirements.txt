@@ -1,3 +1,2 @@
 webapp2
-numpy cython
 scikit-surprise
