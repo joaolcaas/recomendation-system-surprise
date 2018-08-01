@@ -1,3 +1,4 @@
+setuptools
 numpy==1.15.0
 webapp2
 scikit-surprise
